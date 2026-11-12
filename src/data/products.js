@@ -115,20 +115,26 @@ export const getProductById = (id) => PRODUCTS.find((p) => p.id === id) || null;
 
 export const NEWS = [
   {
-    image: "assets/images/News/banner-1.1.webp",
-    alt: "BYOU",
+    image: "assets/images/News/news-byou.webp",
+    alt: "Build-Your-Own Uno boards in green, black and white",
+    productId: "byou",
+    tag: "MB-01 · Build-Your-Own Uno",
     title: "Build-Your-Own Arduino – Learn by Building",
     copy: "Introducing the Build-Your-Own Arduino — a hands-on microcontroller kit designed to take learning beyond plug-and-play. Instead of buying a pre-assembled board, users build it themselves, gaining real-world electronics experience from the ground up.",
   },
   {
-    image: "assets/images/News/banner-2.1.webp",
-    alt: "Rover",
+    image: "assets/images/News/news-rover.webp",
+    alt: "Rover Robotics Module assembled with a Nano and motor driver",
+    productId: "rover-module",
+    tag: "MB-03 · Rover Robotics Module",
     title: "Rover – The All-in-One Robotics Module",
     copy: "Introducing Rover, the ultimate robotics control module designed to make building mobile robots faster, cleaner, and smarter. Whether you’re a student, hobbyist, or robotics enthusiast, Rover combines all the essential interfaces and mounts in one compact platform.",
   },
   {
-    image: "assets/images/News/banner-3.1.webp",
-    alt: "Nano Expansion Board",
+    image: "assets/images/News/news-nano.webp",
+    alt: "Nano Expansion Board with Nano and TB6612FNG motor driver",
+    productId: "nano-expansion",
+    tag: "MB-02 · Nano Expansion Board",
     title: "Nano Expansion Board - Build More. Wire Less. Create Faster.",
     copy: "Stop fighting messy wiring and start building smarter. This Arduino Expansion Board packs everything you need to power robotics and automation projects—cleanly and efficiently.",
   },

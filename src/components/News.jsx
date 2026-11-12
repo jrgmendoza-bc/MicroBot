@@ -44,11 +44,17 @@ export default function News() {
                 aria-hidden={idx !== cur} aria-roledescription="slide" aria-label={`${idx + 1} of ${n}`}>
                 <div className="fbc-media-main">
                   <img src={s.image} alt={s.alt} loading={idx === 0 ? "eager" : "lazy"} draggable="false" />
+                  <span className="fbc-chip"><i className="status-dot" />{s.tag}</span>
                 </div>
                 <div className="fbc-caption">
-                  <span className="fbc-count">{String(idx + 1).padStart(2, "0")} <em>/ {String(n).padStart(2, "0")}</em></span>
-                  <h3 className="fbc-caption-title">{s.title}</h3>
-                  <p className="fbc-caption-copy">{s.copy}</p>
+                  <div className="fbc-caption-text">
+                    <span className="fbc-count">{String(idx + 1).padStart(2, "0")} <em>/ {String(n).padStart(2, "0")}</em></span>
+                    <h3 className="fbc-caption-title">{s.title}</h3>
+                    <p className="fbc-caption-copy">{s.copy}</p>
+                  </div>
+                  <a className="btn btn-primary fbc-cta" href={`product-detail.html?id=${s.productId}`} tabIndex={idx === cur ? 0 : -1}>
+                    <span>View Product</span><Icon name="arrow" size={16} />
+                  </a>
                 </div>
               </article>
             ))}
