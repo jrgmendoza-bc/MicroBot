@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProductById } from "../data/products.js";
+import { getProductById, LINKS } from "../data/products.js";
 import { Icon } from "./Icons.jsx";
 
 /** "Dual Motor Power - Drive two DC motors…" → { lead, rest } */
@@ -89,6 +89,7 @@ export default function ProductDetail() {
             <div className="detail-actions">
               <a className="btn btn-primary detail-buy" href={product.buyLink || product.shopeeLink || "https://shopee.ph/"} target="_blank" rel="noopener"><Icon name="cart" size={18} /><span>Buy Now</span></a>
               <a href={product.documentation || "#"} className="btn btn-outline doc-btn" target="_blank" rel="noopener"><Icon name="doc" size={18} /><span>Product Documentation</span></a>
+              <a className="btn btn-outline" href={LINKS.github} target="_blank" rel="noopener"><Icon name="code" size={18} /><span>Sample Code</span></a>
               <a className="btn btn-ghost section-link" href="index.html#products"><Icon name="left" size={18} /><span>Back to Products</span></a>
             </div>
           </div>

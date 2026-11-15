@@ -25,6 +25,8 @@ export function Icon({ name, size = 24 }) {
       return (<svg {...p}><path d="m15 5-7 7 7 7" /></svg>);
     case "right":
       return (<svg {...p}><path d="m9 5 7 7-7 7" /></svg>);
+    case "code":
+      return (<svg {...p}><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" /></svg>);
     case "doc":
       return (<svg {...p}><path d="M7 3h7l5 5v13H7V3Z" /><path d="M14 3v5h5M10 13h6M10 17h6" /></svg>);
     case "cart":

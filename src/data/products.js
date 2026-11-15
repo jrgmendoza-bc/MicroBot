@@ -6,6 +6,7 @@ export const LINKS = {
   email: "microbot.ph@gmail.com",
   gmailCompose: "https://mail.google.com/mail/?view=cm&fs=1&to=microbot.ph@gmail.com",
   mailto: "mailto:microbot.ph@gmail.com",
+  github: "https://github.com/Microbot-ph",
 };
 
 export const PRODUCTS = [

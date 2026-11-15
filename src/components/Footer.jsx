@@ -35,6 +35,7 @@ export default function Footer({ home = true }) {
           <a href={LINKS.mailto}>Email Us</a>
           <a href={LINKS.facebook} target="_blank" rel="noopener">Facebook</a>
           <a href={LINKS.shopee} target="_blank" rel="noopener">Shopee</a>
+          <a href={LINKS.github} target="_blank" rel="noopener">GitHub · Sample Code</a>
         </div>
       </div>
       <div className="footer-wordmark" aria-hidden="true">MICROBOT</div>
