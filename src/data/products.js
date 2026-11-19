@@ -209,6 +209,22 @@ export const NEWS = [
     title: "Nano Expansion Board - Build More. Wire Less. Create Faster.",
     copy: "Stop fighting messy wiring and start building smarter. This Arduino Expansion Board packs everything you need to power robotics and automation projects—cleanly and efficiently.",
   },
+  {
+    image: "assets/images/News/news-linefollower.webp",
+    alt: "Line Follower Frame Kit parts laid out: board, wheels, wires and hardware",
+    productId: "line-follower",
+    tag: "MB-04 · Line Follower Frame Kit",
+    title: "Line Follower Frame Kit – Build Your Own Line-Following Robot",
+    copy: "Now available: a DIY robotics chassis kit with the line follower board, N20 wheels and motor mounts, mounting hardware and wiring accessories. Ideal for students, beginners and makers building Arduino-based line-following robots.",
+  },
+  {
+    image: "assets/images/News/news-sumobot.webp",
+    alt: "Microbot Sumobot with wedge blade and ultrasonic sensors",
+    productId: "sumobot",
+    tag: "MB-05 · Sumobot Kit",
+    title: "Sumobot Kit – Coming Soon",
+    copy: "Our wedge-fronted Sumobot with ultrasonic sensing is on the way. Full details and pricing will be announced soon.",
+  },
 ];
 
 export const HERO_BANNERS = [
