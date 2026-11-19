@@ -87,6 +87,16 @@ export default function ProductDetail() {
               </ul>
             </div>
 
+            {product.packageIncludes && (
+              <div className="detail-list-wrap">
+                <h2 className="detail-list-title"><span>//</span> Package Includes</h2>
+                <ul className="detail-list chips">
+                  {product.packageIncludes.map((a) => <li key={a}>{a}</li>)}
+                </ul>
+                {product.note && <p className="detail-note">{product.note}</p>}
+              </div>
+            )}
+
             {orderable(product) && (
               <div className="detail-local">
                 <p className="detail-local-label"><Icon name="check" size={14} /> Baguio &amp; La Trinidad locals: order direct, we email your order to the shop</p>

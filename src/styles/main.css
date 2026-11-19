@@ -467,3 +467,5 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .shop-form .btn[disabled] { opacity: 0.6; pointer-events: none; }
 @media (max-width: 480px) { .shop-form .two { grid-template-columns: 1fr; } }
+
+.detail-note { margin: 14px 0 0; padding: 12px 14px; border-left: 2px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 13px; line-height: 1.6; color: var(--text-2); }
