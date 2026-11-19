@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./styles/main.css";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+import Shop from "./shop/Shop.jsx";
 import Backdrop from "./components/Backdrop.jsx";
 import ProductDetail from "./components/ProductDetail.jsx";
 
@@ -16,6 +17,7 @@ function App() {
           <ProductDetail />
         </section>
       </main>
+      <Shop />
       <Footer home={false} />
     </>
   );

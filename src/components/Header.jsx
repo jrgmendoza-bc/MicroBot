@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { CartButton } from "../shop/Shop.jsx";
 
 const NAV = [
   { id: "home", label: "Home" },
@@ -65,6 +66,7 @@ export default function Header({ active, onNavigate, home = true }) {
             </a>
           ))}
         </nav>
+        <CartButton />
       </div>
     </header>
   );

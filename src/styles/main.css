@@ -410,3 +410,60 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .reveal { opacity: 1; transform: none; }
   .hero-scan { display: none; }
 }
+
+/* ---------- Shop: cart, checkout, local ordering ---------- */
+.cart-btn { position: relative; width: 44px; height: 44px; margin-left: 8px; display: inline-grid; place-items: center; flex: none; color: var(--text); border: 1px solid var(--line-strong); border-radius: 12px; background: rgba(255, 255, 255, 0.04); cursor: pointer; transition: border-color 0.2s, background 0.2s, color 0.2s; }
+.cart-btn:hover { border-color: var(--accent-line); background: var(--accent-soft); color: var(--accent); }
+.cart-badge { position: absolute; top: -6px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: var(--accent); color: #fff; font: 600 11px/20px var(--font-mono); text-align: center; box-shadow: 0 0 14px var(--accent-glow); }
+@media (max-width: 820px) { .cart-btn { order: 2; margin-left: auto; } .nav-toggle { order: 3; margin-left: 8px; } }
+
+.detail-local { margin-top: 34px; padding: 18px; border: 1px solid var(--accent-line); border-radius: var(--r-md); background: var(--accent-soft); }
+.detail-local-label { display: flex; align-items: center; gap: 8px; margin: 0; font: 500 12px/1.5 var(--font-mono); letter-spacing: 0.04em; color: var(--text-2); }
+.detail-local-label svg { color: var(--accent); flex: none; }
+.detail-local .detail-actions { margin-top: 14px; padding-top: 0; border-top: 0; }
+.detail-local + .detail-actions { margin-top: 18px; padding-top: 0; border-top: 0; }
+
+.shop-root { position: fixed; inset: 0; z-index: 200; pointer-events: none; }
+.shop-scrim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); opacity: 0; transition: opacity 0.3s; }
+.shop-panel { position: absolute; top: 0; right: 0; bottom: 0; width: min(440px, 100%); display: flex; flex-direction: column; background: var(--panel); border-left: 1px solid var(--line-strong); box-shadow: -30px 0 80px -30px rgba(0, 0, 0, 0.9); transform: translateX(105%); transition: transform 0.35s var(--ease); outline: none; }
+.shop-root.is-open { pointer-events: auto; }
+.shop-root.is-open .shop-scrim { opacity: 1; }
+.shop-root.is-open .shop-panel { transform: none; }
+.shop-head { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.shop-head h2 { margin: 0; font: 600 18px var(--font-display); }
+.shop-x { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--line-strong); background: transparent; color: var(--text); font-size: 22px; line-height: 1; cursor: pointer; }
+.shop-x:hover { border-color: var(--accent-line); color: var(--accent); }
+.shop-body { flex: 1; overflow-y: auto; padding: 18px 22px 26px; display: flex; flex-direction: column; }
+.shop-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.shop-line { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; align-items: start; padding: 12px; border: 1px solid var(--line); border-radius: var(--r-md); background: rgba(255, 255, 255, 0.025); }
+.shop-line img { width: 64px; height: 64px; object-fit: contain; border-radius: 10px; background: #000; }
+.shop-line-info { display: grid; gap: 4px; min-width: 0; }
+.shop-line-info b { font-size: 14px; }
+.shop-line-info small { color: var(--text-3); }
+.shop-line-end { display: grid; gap: 8px; justify-items: end; font-size: 14px; }
+.qty { display: inline-flex; align-items: center; gap: 2px; margin-top: 4px; border: 1px solid var(--line-strong); border-radius: 10px; width: max-content; }
+.qty button { width: 32px; height: 30px; border: 0; background: transparent; color: var(--text); font-size: 16px; cursor: pointer; }
+.qty button:hover { color: var(--accent); }
+.qty span { min-width: 26px; text-align: center; font: 500 13px var(--font-mono); }
+.link-btn { padding: 0; border: 0; background: none; color: var(--accent); font: inherit; font-size: 12px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.shop-foot { margin-top: auto; padding-top: 20px; display: grid; gap: 12px; }
+.shop-total { display: flex; justify-content: space-between; align-items: baseline; padding-top: 6px; font-size: 15px; color: var(--text-2); }
+.shop-total b { font: 600 22px var(--font-display); color: var(--text); }
+.shop-note { margin: 0; font-size: 12.5px; line-height: 1.55; color: var(--text-3); }
+.shop-empty { margin: auto; text-align: center; display: grid; gap: 12px; justify-items: center; color: var(--text-2); }
+.shop-empty svg { color: var(--accent); }
+.shop-empty h3 { margin: 0; font: 600 22px var(--font-display); color: var(--text); }
+.shop-form { display: grid; gap: 14px; }
+.shop-form label { display: grid; gap: 6px; font-size: 12.5px; color: var(--text-2); }
+.shop-form label em { font-style: normal; color: var(--text-3); }
+.shop-form input, .shop-form select, .shop-form textarea { width: 100%; padding: 11px 12px; border-radius: 10px; border: 1px solid var(--line-strong); background: rgba(255, 255, 255, 0.04); color: var(--text); font: inherit; font-size: 14px; }
+.shop-form select option { background: var(--panel-2); }
+.shop-form input:focus, .shop-form select:focus, .shop-form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.shop-form textarea { resize: vertical; }
+.shop-form .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.shop-form .back { justify-self: start; font-size: 13px; }
+.shop-area { margin: 0; padding: 10px 12px; border-radius: 10px; font-size: 13px; color: var(--text-2); background: var(--accent-soft); border: 1px solid var(--accent-line); }
+.shop-error { padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.5; color: #ffb4a3; border: 1px solid var(--accent-line); background: rgba(235, 78, 43, 0.1); }
+.hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.shop-form .btn[disabled] { opacity: 0.6; pointer-events: none; }
+@media (max-width: 480px) { .shop-form .two { grid-template-columns: 1fr; } }

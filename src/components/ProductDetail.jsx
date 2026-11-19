@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProductById, LINKS } from "../data/products.js";
 import { Icon } from "./Icons.jsx";
+import { cart, shopUI, buyNow } from "../shop/store.js";
 
 /** "Dual Motor Power - Drive two DC motors…" → { lead, rest } */
 function splitFeature(text) {
@@ -86,8 +87,16 @@ export default function ProductDetail() {
               </ul>
             </div>
 
+            <div className="detail-local">
+              <p className="detail-local-label"><Icon name="check" size={14} /> Baguio &amp; La Trinidad locals: order direct, we email your order to the shop</p>
+              <div className="detail-actions">
+                <button type="button" className="btn btn-primary" onClick={() => buyNow(product.id)}><Icon name="bag" size={18} /><span>Buy Now</span></button>
+                <button type="button" className="btn btn-outline" onClick={() => { cart.add(product.id); shopUI.open("cart"); }}><Icon name="cart" size={18} /><span>Add to Cart</span></button>
+              </div>
+            </div>
+
             <div className="detail-actions">
-              <a className="btn btn-primary detail-buy" href={product.buyLink || product.shopeeLink || "https://shopee.ph/"} target="_blank" rel="noopener"><Icon name="cart" size={18} /><span>Buy Now</span></a>
+              <a className="btn btn-ghost detail-buy" href={product.buyLink || product.shopeeLink || "https://shopee.ph/"} target="_blank" rel="noopener"><Icon name="cart" size={18} /><span>Buy on Shopee</span></a>
               <a href={product.documentation || "#"} className="btn btn-outline doc-btn" target="_blank" rel="noopener"><Icon name="doc" size={18} /><span>Product Documentation</span></a>
               <a className="btn btn-outline" href={LINKS.github} target="_blank" rel="noopener"><Icon name="code" size={18} /><span>Sample Code</span></a>
               <a className="btn btn-ghost section-link" href="index.html#products"><Icon name="left" size={18} /><span>Back to Products</span></a>

@@ -8,6 +8,7 @@ import Products from "./components/Products.jsx";
 import Showcase from "./components/Showcase.jsx";
 import About from "./components/About.jsx";
 import Footer from "./components/Footer.jsx";
+import Shop from "./shop/Shop.jsx";
 import Backdrop from "./components/Backdrop.jsx";
 import { useSectionSpy } from "./components/hooks.jsx";
 
@@ -27,6 +28,7 @@ function App() {
         <Showcase />
         <About />
       </main>
+      <Shop />
       <Footer />
     </>
   );

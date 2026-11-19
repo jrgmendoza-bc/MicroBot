@@ -32,7 +32,7 @@ export default function Footer({ home = true }) {
 
         <div className="footer-col">
           <h3>Connect</h3>
-          <a href={LINKS.mailto}>Email Us</a>
+          <a href={LINKS.gmailCompose} target="_blank" rel="noopener">Email Us</a>
           <a href={LINKS.facebook} target="_blank" rel="noopener">Facebook</a>
           <a href={LINKS.shopee} target="_blank" rel="noopener">Shopee</a>
           <a href={LINKS.github} target="_blank" rel="noopener">GitHub · Sample Code</a>
