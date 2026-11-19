@@ -28,6 +28,8 @@ export default function Footer({ home = true }) {
           <a href="product-detail.html?id=byou">BYOU / Build Your Own UNO</a>
           <a href="product-detail.html?id=nano-expansion">Nano Expansion Board</a>
           <a href="product-detail.html?id=rover-module">Rover Robotics Module</a>
+          <a href="product-detail.html?id=line-follower">Line Follower Robot Kit</a>
+          <a href="product-detail.html?id=sumobot">Sumobot Kit</a>
         </div>
 
         <div className="footer-col">

@@ -9,13 +9,14 @@ const KEY = "microbot-cart-v1";
 const MAX_QTY = 20;
 
 export const priceOf = (p) => Number(String(p.priceText).replace(/[^\d.]/g, "")) || 0;
+export const orderable = (p) => priceOf(p) > 0;
 export const peso = (n) => "₱" + n.toLocaleString("en-PH", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
 function load() {
   try {
     const raw = JSON.parse(localStorage.getItem(KEY));
     if (!Array.isArray(raw)) return [];
-    return raw.filter((i) => PRODUCTS.some((p) => p.id === i.id) && i.qty > 0).map((i) => ({ id: i.id, qty: Math.min(MAX_QTY, i.qty | 0) }));
+    return raw.filter((i) => PRODUCTS.some((p) => p.id === i.id && orderable(p)) && i.qty > 0).map((i) => ({ id: i.id, qty: Math.min(MAX_QTY, i.qty | 0) }));
   } catch { return []; }
 }
 

@@ -20,7 +20,7 @@ function ProductCard({ product, index }) {
         <h3 className="product-title">{product.name}</h3>
         <p className="product-desc">{product.shortDescription}</p>
         <div className="product-foot">
-          <div className="product-price"><small>Price</small>{product.priceText}</div>
+          <div className="product-price"><small>Price</small>{product.priceText || (product.shopeeLink ? "See Shopee" : "Coming soon")}</div>
           <div className="product-button-wrap">
             <a className="btn btn-primary product-button" href={url}><span>View Product</span><Icon name="arrow" size={16} /></a>
           </div>

@@ -110,6 +110,54 @@ export const PRODUCTS = [
       "https://shopee.ph/Rover-%E2%80%93-The-All-in-One-Robotics-Module-i.1638858368.47657348448?extraParams=%7B%22display_model_id%22%3A345990339852%2C%22model_selection_logic%22%3A3%7D",
     documentation: "assets/docs/Rover.pdf",
   },
+  {
+    id: "line-follower",
+    name: "Line Follower Robot Kit",
+    shortDescription: "A build-it-yourself line following robot on a T-shaped perforated chassis, driven by an Arduino Nano and a dual motor driver. Assemble it, upload the code and watch it follow the track.",
+    fullDescription:
+      "The Line Follower kit is a hands-on way to learn sensing, motor control and robotics logic. Assemble the chassis, wire the Nano controller and motor driver, then tune your code to follow any track. <br><br> Sample code for the kit is available on our GitHub.",
+    priceText: null,
+    availability: "Price on Shopee",
+    images: [1, 2, 3, 4, 5].map((n) => `assets/images/Products/LineFollower/${n}.webp`),
+    keyFeatures: [
+      "Arduino Nano controller on a clean, wire-friendly perforated chassis",
+      "Dual DC motor drive with a motor driver module",
+      "Geared motors with wheels for steady line tracking",
+      "Beginner-friendly build with sample code on GitHub",
+    ],
+    applications: [
+      "Line following competitions",
+      "STEM classes and robotics workshops",
+      "Sensor and PID control experiments",
+    ],
+    shopeeLink: "https://shopee.ph/product/1638858368/44435365288",
+    buyLink: "https://shopee.ph/product/1638858368/44435365288",
+    documentation: null,
+  },
+  {
+    id: "sumobot",
+    name: "Sumobot Kit",
+    shortDescription: "A compact, wedge-fronted sumo robot built on the Microbot controller, with ultrasonic sensing for the ring. Details coming soon.",
+    fullDescription:
+      "The Microbot Sumobot is a rugged little fighter with a metal wedge blade, ultrasonic sensors and a Bluetooth-ready controller. <br><br> Full specifications and pricing will be announced soon. Message us to be notified when it is available.",
+    priceText: null,
+    availability: "Coming soon",
+    images: [1, 2, 3, 4, 5].map((n) => `assets/images/Products/Sumobot/${n}.webp`),
+    keyFeatures: [
+      "Wedge blade front for pushing opponents out of the ring",
+      "Ultrasonic sensors for detecting opponents",
+      "Nano controller with room for a Bluetooth module",
+      "Full specifications coming soon",
+    ],
+    applications: [
+      "Sumobot competitions",
+      "School robotics projects",
+      "Autonomous robot programming practice",
+    ],
+    shopeeLink: null,
+    buyLink: null,
+    documentation: null,
+  },
 ];
 
 export const getProductById = (id) => PRODUCTS.find((p) => p.id === id) || null;
